@@ -11,7 +11,7 @@ const SearchBar: React.FC = () => {
   return (
     <input
       type="text"
-      placeholder="Buscar productos..."
+      placeholder="Encuentra tu producto"
       value={query}
       onChange={handleSearch}
       className="search-bar"

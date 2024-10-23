@@ -9,9 +9,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #EF4444;
-  border-bottom: 2px solid #e0e0e0;
+  padding: 0.2rem 20rem;
+  background-color: white;
+  border-bottom: 3px solid #e0e0e0;
 }
 
 .navbar-logo {
@@ -52,23 +52,27 @@ input {
 
 button {
   padding: 0.6rem;
-  background-color: #D4D4D8;
-  color: black;
+  background-color: white;
+  color: #073418;
   border: none;
   border-radius: 100px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #858594;
+  background-color: #e0e0e0;
 }
 
-.navbar-logo {
+.navbar-logo img {
+  width: 250px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantén la proporción de aspecto */
+}
+
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-.logo-image {
-  width: 120px; /* Ajusta el tamaño según sea necesario */
-  height: auto; /* Mantiene la proporción */
+  padding: 0.5rem rem;
+  background-color: white;
+  border-bottom: 3px solid #e0e0e0;
 }

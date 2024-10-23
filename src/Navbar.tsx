@@ -13,7 +13,6 @@ const Navbar: React.FC = () => {
                 <img src="/src/logo.svg" alt="Logo de la tienda" className="logo-image" />
             </Link>
         </div>
-
       <ul className="navbar-links">
         <li>
           <Link to="/">
