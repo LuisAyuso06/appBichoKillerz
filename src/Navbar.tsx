@@ -8,16 +8,25 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-        <div className="navbar-logo">
-            <Link to="/">
-                <img src="/src/logo.svg" alt="Logo de la tienda" className="logo-image" />
-            </Link>
-        </div>
+        
+      <div className="navbar-logo">
+        <Link to="/">
+          <img src="/src/img/logo.svg" alt="Logo de la tienda" className="logo-image" />
+        </Link>
+      </div>
+        
       <ul className="navbar-links">
         <li>
           <Link to="/">
             <button className="">
               <span className="material-symbols-outlined">home</span>
+            </button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/Products">
+            <button className="">
+              <span className="material-symbols-outlined">shopping_bag</span>
             </button>
           </Link>
         </li>
