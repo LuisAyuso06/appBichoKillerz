@@ -8,7 +8,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo"></div>
+        <div className="navbar-logo">
+            <Link to="/">
+                <img src="/src/logo.svg" alt="Logo de la tienda" className="logo-image" />
+            </Link>
+        </div>
 
       <ul className="navbar-links">
         <li>
@@ -19,7 +23,11 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about">Quiénes somos</Link>
+          <Link to="/about">
+            <button className="">
+            <span className="material-symbols-outlined">info</span>
+            </button>
+          </Link>
         </li>
       </ul>
 

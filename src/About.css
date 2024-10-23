@@ -1,0 +1,40 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2d572c; /* Verde */
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-carousel {
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .carousel .legend {
+    background: rgba(45, 87, 44, 0.7); /* Verde transparente */
+    font-size: 1rem;
+  }
+  
