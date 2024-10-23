@@ -48,6 +48,14 @@ const Navbar: React.FC = () => {
           </button>
         </Link>
       </div>
+
+      <div className="login">
+        <Link to="/login">
+          <button className="">
+          <span className="material-symbols-outlined">login</span>
+          </button>
+        </Link>
+      </div>
     </nav>
   );
 };
