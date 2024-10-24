@@ -24,10 +24,16 @@
     align-items: center;
   }
   
-  .about-carousel {
-    max-width: 800px;
-    font-family: "Josefin Sans", sans-serif;
-    margin-bottom: 20px;
+  .about-carousel .img-carrusel {
+    display: flex;
+
+  }
+  
+  .about-carousel img {
+    width: 100%; /* Ajusta al ancho del contenedor del carrusel */
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin: 0 auto; /* Centra las imágenes */
   }
   
   .about-text {
