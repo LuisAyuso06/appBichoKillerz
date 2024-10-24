@@ -94,6 +94,7 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
   
   .footer-info, .footer-social {
     font-family: "Josefin Sans", sans-serif;
@@ -136,6 +137,12 @@
     .footer-info, .footer-social {
       text-align: center;
     }
+  }
+  
+
+  .footer-logo {
+    width: 100px; /* Ajusta el tamaño del logo según prefieras */
+    height: auto; /* Mantén la proporción de aspecto */
   }
   
   

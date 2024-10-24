@@ -1,6 +1,7 @@
 import React from 'react';
 import './about.css'; // Importa los estilos del carrusel
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
@@ -43,6 +44,7 @@ const About: React.FC = () => {
             </div>
           </Carousel>
         </div>
+
         <div className="about-text">
           <p>
             En BichoKillerz, nos dedicamos a ofrecer soluciones integrales para el control de plagas, combinando productos innovadores y ecológicos con servicios profesionales especializados.
@@ -77,6 +79,13 @@ const About: React.FC = () => {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter: BichoKillerz</a>
             </div>
           </div>
+    
+          <div className="footer-logo">
+                <Link to="/">
+          <img src="/src/img/image.png" alt="Logo de la tienda" className="logo-image" />
+                </Link>
+            </div>
+          
           <div className="footer-credits">
             <p>&copy; 2024 BichoKillerz. Todos los derechos reservados.</p>
           </div>
