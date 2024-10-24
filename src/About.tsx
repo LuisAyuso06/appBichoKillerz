@@ -34,13 +34,13 @@ const About: React.FC = () => {
             emulateTouch={true} 
           >
             <div className="img-carrusel">
-                <img src="/src/img/verde1.jpg" alt="" />
+                <img src="/src/img/verde.jpg" alt="" />
             </div>
             <div className="img-carrusel">
-                 <img src="/src/img/verde2.jpg" alt="" />
+                 <img src="/src/img/verde.jpg" alt="" />
             </div>
             <div className="img-carrusel">
-                 <img src="/src/img/verde3.jpg" alt="" />
+                 <img src="/src/img/verde.jpg" alt="" />
             </div>
           </Carousel>
         </div>
