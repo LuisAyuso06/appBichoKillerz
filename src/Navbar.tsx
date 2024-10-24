@@ -17,9 +17,9 @@ const Navbar: React.FC = () => {
         
       <ul className="navbar-links">
         <li>
-          <Link to="/">
+          <Link to="/about">
             <button className="">
-              <span className="material-symbols-outlined">home</span>
+            <span className="material-symbols-outlined">home</span>
             </button>
           </Link>
         </li>
@@ -30,13 +30,7 @@ const Navbar: React.FC = () => {
             </button>
           </Link>
         </li>
-        <li>
-          <Link to="/about">
-            <button className="">
-            <span className="material-symbols-outlined">info</span>
-            </button>
-          </Link>
-        </li>
+        
       </ul>
 
       <SearchBar />

@@ -11,12 +11,13 @@ const SearchBar: React.FC = () => {
   return (
     <input
       type="text"
-      placeholder="Encuentra tu producto"
+      placeholder="🔍"  // Reemplaza el texto por el símbolo que desees
       value={query}
       onChange={handleSearch}
       className="search-bar"
     />
   );
+  
 };
 
 export default SearchBar;

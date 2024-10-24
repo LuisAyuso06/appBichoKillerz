@@ -34,13 +34,13 @@ const About: React.FC = () => {
             emulateTouch={true} 
           >
             <div className="img-carrusel">
-                <img src="/src/img/verde.jpg" alt="" />
+                <img src="/src/img/verde1.jpg" alt="" />
             </div>
             <div className="img-carrusel">
-                 <img src="/src/img/verde.jpg" alt="" />
+                 <img src="/src/img/verde2.jpg" alt="" />
             </div>
             <div className="img-carrusel">
-                 <img src="/src/img/verde.jpg" alt="" />
+                 <img src="/src/img/verde3.jpg" alt="" />
             </div>
           </Carousel>
         </div>
@@ -63,20 +63,20 @@ const About: React.FC = () => {
         <div className="footer-container">
           <div className="footer-info">
             <h3>Contacto</h3>
-            <p>Calle Stefan Papucho, México</p>
-            <p>Teléfono: +999 549 5294 </p>
-            <p>Email: contacto@bichokillerz.com</p>
+            <p>📍Calle Stefan Papucho, México</p>
+            <p>📞Teléfono: +999 549 5294 </p>
+            <p>✉️Email: contacto@bichokillerz.com</p>
           </div>
           <div className="footer-social">
             <h3>Síguenos</h3>
             <div className="info-social">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook: BichoKillerz</a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘Facebook: BichoKillerz</a>
             </div>
             <div className="info-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram: BichitoKillez</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📷 Instagram: BichitoKillez</a>
             </div>
             <div className="info-social">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter: BichoKillerz</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">✖️ X : BichoKillerz</a>
             </div>
           </div>
     
