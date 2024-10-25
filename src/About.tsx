@@ -9,40 +9,6 @@ const About: React.FC = () => {
       <h2 className="about-title">NUESTRA EMPRESA</h2>
       <div className="about-content">
         <div className="about-carousel">
-          <Carousel
-            autoPlay
-            infiniteLoop
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={false}
-            interval={3000}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button type="button" onClick={onClickHandler} title={label} className="arrow-prev">
-                  &#10094;
-                </button>
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <button type="button" onClick={onClickHandler} title={label} className="arrow-next">
-                  &#10095;
-                </button>
-              )
-            }
-            transitionTime={500}
-            emulateTouch={true} 
-          >
-            <div className="img-carrusel">
-                <img src="/src/img/verde.jpg" alt="" />
-            </div>
-            <div className="img-carrusel">
-                 <img src="/src/img/verde.jpg" alt="" />
-            </div>
-            <div className="img-carrusel">
-                 <img src="/src/img/verde.jpg" alt="" />
-            </div>
-          </Carousel>
         </div>
 
         <div className="about-text">
