@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 20rem;
+  background-color: white;
+  border-bottom: 3px solid #e0e0e0;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cart {
+  font-size: 1.2rem;
+  color: #4caf50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.9rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+button {
+  padding: 0.6rem;
+  background-color: white;
+  color: #073418;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.navbar-logo img {
+  padding-top: 15px;
+  width: 250px; /* Ajusta el tamaño del logo según prefieras */
+  height: auto; /* Mantén la proporción de aspecto */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 15rem;
+  background-color: white;
+  border-bottom: 5px solid #e0e0e0;
+}
+
+.aboutButton {
+  background-image: url(/src/img/homeIcon.svg);
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+.catalogButton {
+  background-image: url(/src/img/catalogIcon.svg);
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+.cartButton {
+  background-image: url(/src/img/cartIcon.svg);
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+.loginButton {
+  background-image: url(/src/img/loginIcon.svg);
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
