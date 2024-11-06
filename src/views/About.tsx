@@ -5,7 +5,8 @@ import '../styles/about.css'; // Importa el archivo de estilos de About
 
 const About: React.FC = () => {
   return (
-    <div className="about-container">
+    <div>
+      <div className='about-container'>
       <h2 className="about-title">NUESTRA EMPRESA</h2>
       <div className="about-content">
         <div className="about-carousel">
@@ -22,6 +23,7 @@ const About: React.FC = () => {
             En BichoKillerz, creemos en la importancia de cuidar tanto a nuestros clientes como al entorno en el que vivimos. Por eso, seguimos desarrollando y mejorando nuestras soluciones.
           </p>
         </div>
+      </div>
       </div>
 
       {/* Footer */}
