@@ -1,11 +1,10 @@
 import React from 'react';
-import Catalog from '../models/CatalogModel';
+import Productos from '../models/productosModel';
 
 const Products: React.FC = () => {
   return (
     <div>
-      <h2>Lista de Productos</h2>
-      <Catalog />
+      <Productos />
     </div>
   );
 };

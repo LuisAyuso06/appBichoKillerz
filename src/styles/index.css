@@ -154,3 +154,7 @@ button:hover {
   visibility: visible;
   opacity: 1;
 }
+
+.productosCatalogo {
+  border: #073418 1px solid;
+}

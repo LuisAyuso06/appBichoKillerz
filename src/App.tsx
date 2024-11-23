@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './views/Home';
-import Catalog from './views/Catalog';
+import Products from './views/Productos';
 import About from './views/About';
 import Cart from './views/Cart';
 import LoginRegister from './views/LoginRegister'; // Importa el componente de Login/Register
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/catalog" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginRegister />} />  {/* Ruta para Login */}
           <Route path="/register" element={<LoginRegister />} />  {/* Ruta para Registro */}

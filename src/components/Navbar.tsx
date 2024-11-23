@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <li>
           <Link to="/Catalog">
             <button className="catalogButton tooltip">
-              <span className='tooltiptext'>Catalog</span>
+              <span className='tooltiptext'>Products</span>
             </button>
           </Link>
         </li>
