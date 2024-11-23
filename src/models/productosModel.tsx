@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { productosApi } from './api'
+import { productosApi } from './Api'
 import { Producto } from '../interfaces/ProductoInterface'
 import { ProductCard } from '../components/productCard'
 import axios from 'axios'
+import '../styles/catalogStyles.css'
 
 const Productos: React.FC = () => {
   const [productos, setProductos] = useState<Producto[]>([])
@@ -49,16 +50,24 @@ const Productos: React.FC = () => {
   // Pantalla de productos
   return (
     <div>
-      <h1>Productos</h1>
-      {productos.length === 0 ? (
-        <div>No hay productos disponibles</div>
-      ) : (
-        <div>
-          {productos.map((producto) => (
-            <ProductCard key={producto.id} producto={producto} />
-          ))}
-        </div>
-      )}
+      <div className="catalogTituloContainer">
+        <h1>Productos</h1>
+        <p>
+          Bienvenido a nuestro catálogo de productos, en donde podras ver todos
+          los productos para control de plagas que tenemos para ofrecerte!
+        </p>
+      </div>
+      <div className="catalogContainer">
+        {productos.length === 0 ? (
+          <div>No hay productos disponibles</div>
+        ) : (
+          <div className="catalogContainer">
+            {productos.map((producto) => (
+              <ProductCard key={producto.id} producto={producto} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

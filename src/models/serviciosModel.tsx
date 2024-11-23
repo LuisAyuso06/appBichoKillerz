@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { serviciosApi } from './api'
+import { serviciosApi } from './Api'
 import { Servicio } from '../interfaces/ServicioInterface'
 import { ServicioCard } from '../components/servicioCard'
 import axios from 'axios'
+import '../styles/catalogStyles.css'
 
 const Servicios: React.FC = () => {
   const [servicios, setProductos] = useState<Servicio[]>([])
@@ -49,16 +50,24 @@ const Servicios: React.FC = () => {
   // Pantalla de servicios
   return (
     <div>
-      <h1>Servicios</h1>
-      {servicios.length === 0 ? (
-        <div>No hay servicios disponibles</div>
-      ) : (
-        <div>
-          {servicios.map((servicio) => (
-            <ServicioCard key={servicio.id} servicio={servicio} />
-          ))}
-        </div>
-      )}
+      <div className="catalogTituloContainer">
+        <h1>Productos</h1>
+        <p>
+          Bienvenido a nuestro catálogo de servicios, en donde nuestros
+          profesionales te ofrecen los mejores servicios para control de plagas!
+        </p>
+      </div>
+      <div className="catalogContainer">
+        {servicios.length === 0 ? (
+          <div>No hay servicios disponibles</div>
+        ) : (
+          <div className="catalogContainer">
+            {servicios.map((servicio) => (
+              <ServicioCard key={servicio.id} servicio={servicio} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }
