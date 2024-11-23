@@ -24,13 +24,19 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/Catalog">
+          <Link to="/Products">
             <button className="catalogButton tooltip">
               <span className='tooltiptext'>Products</span>
             </button>
           </Link>
         </li>
-        
+        <li>
+          <Link to="/Services">
+            <button className="catalogButton tooltip">
+              <span className='tooltiptext'>Services</span>
+            </button>
+          </Link>
+        </li>
       </ul>
 
       <SearchBar />

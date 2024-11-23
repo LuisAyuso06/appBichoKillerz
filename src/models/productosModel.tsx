@@ -1,37 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { Producto, productosApi } from './api';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { productosApi } from './api'
+import { Producto } from '../interfaces/ProductoInterface'
+import axios from 'axios'
 
 const Productos: React.FC = () => {
-  const [productos, setProductos] = useState<Producto[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [productos, setProductos] = useState<Producto[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const cargarProductos = async () => {
       try {
-        const data = await productosApi.obtenerTodos();
-        setProductos(data);
+        const data = await productosApi.obtenerTodos()
+        setProductos(data)
       } catch (err) {
         if (axios.isAxiosError(err)) {
-          setError(err.response?.data?.error || 'Error al cargar los productos');
+          setError(err.response?.data?.error || 'Error al cargar los productos')
         } else {
-          setError('Error al cargar los productos');
+          setError('Error al cargar los productos')
         }
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    cargarProductos();
-  }, []);
+    cargarProductos()
+  }, [])
 
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
         <div className="text-lg">Cargando productos...</div>
       </div>
-    );
+    )
   }
 
   if (error) {
@@ -39,7 +40,7 @@ const Productos: React.FC = () => {
       <div className="flex justify-center items-center min-h-screen">
         <div className="text-red-500 text-lg">{error}</div>
       </div>
-    );
+    )
   }
 
   return (
@@ -60,7 +61,7 @@ const Productos: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Productos;
+export default Productos
