@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { productosApi } from './api'
 import { Producto } from '../interfaces/ProductoInterface'
+import { ProductCard } from '../components/productCard'
 import axios from 'axios'
 
 const Productos: React.FC = () => {
@@ -8,6 +9,7 @@ const Productos: React.FC = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
+  // Conseguir los productos de la api
   useEffect(() => {
     const cargarProductos = async () => {
       try {
@@ -23,26 +25,28 @@ const Productos: React.FC = () => {
         setLoading(false)
       }
     }
-
     cargarProductos()
   }, [])
 
+  // Pantalla de carga
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-lg">Cargando productos...</div>
+      <div>
+        <div>Cargando productos...</div>
       </div>
     )
   }
 
+  // Pantalla de error
   if (error) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-red-500 text-lg">{error}</div>
+      <div>
+        <div>{error}</div>
       </div>
     )
   }
 
+  // Pantalla de productos
   return (
     <div>
       <h1>Productos</h1>
@@ -51,12 +55,7 @@ const Productos: React.FC = () => {
       ) : (
         <div>
           {productos.map((producto) => (
-            <div key={producto.id} style={{ margin: '20px' }}>
-              <h2>{producto.nombre}</h2>
-              <p>{producto.descripcion}</p>
-              <p>Precio: ${producto.precio}</p>
-              <p>Stock: {producto.stock}</p>
-            </div>
+            <ProductCard key={producto.id} producto={producto} />
           ))}
         </div>
       )}
