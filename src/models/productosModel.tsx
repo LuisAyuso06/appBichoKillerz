@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { productosApi } from './Api'
+import { productosApi } from './Api.ts'
 import { Producto } from '../interfaces/ProductoInterface'
 import { ProductCard } from '../components/productCard'
 import axios from 'axios'

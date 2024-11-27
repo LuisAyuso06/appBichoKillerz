@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
-import { useCartContext } from '../contexts/CartContext';
 
 const Navbar: React.FC = () => {
-  const { cartItems } = useCartContext();
 
   return (
     <nav className="navbar">
@@ -40,14 +38,6 @@ const Navbar: React.FC = () => {
       </ul>
 
       <SearchBar />
-
-      <div className="cart">
-        <Link to="/cart">
-          <button className="cartButton tooltip">
-            <span className='tooltiptext'>Cart</span>
-          </button>
-        </Link>
-      </div>
 
       <div className="login">
         <Link to="/login">

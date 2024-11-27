@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { serviciosApi } from './Api'
+import { serviciosApi } from './Api.ts'
 import { Servicio } from '../interfaces/ServicioInterface'
 import { ServicioCard } from '../components/servicioCard'
 import axios from 'axios'

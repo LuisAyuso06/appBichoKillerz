@@ -4,14 +4,11 @@ import Home from './views/Home';
 import Products from './views/Products';
 import Services from './views/Services';
 import About from './views/About';
-import Cart from './views/Cart';
 import LoginRegister from './views/LoginRegister'; // Importa el componente de Login/Register
-import { CartProvider } from './contexts/CartContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
-    <CartProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -19,12 +16,10 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginRegister />} />  {/* Ruta para Login */}
           <Route path="/register" element={<LoginRegister />} />  {/* Ruta para Registro */}
         </Routes>
       </Router>
-    </CartProvider>
   );
 };
 

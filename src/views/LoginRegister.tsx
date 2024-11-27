@@ -25,7 +25,7 @@ const LoginRegister: React.FC = () => {
   });
 
   // Función que maneja el envío del formulario
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (_data: FormData) => {
     if (isRegister) {
       // Lógica de registro
       Swal.fire({
