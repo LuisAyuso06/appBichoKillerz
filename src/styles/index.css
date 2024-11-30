@@ -1,160 +1,205 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+body{
+  font-family: arial, sans-serif;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
-
+/* General Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 20rem;
   background-color: white;
-  border-bottom: 3px solid #e0e0e0;
-}
-
-.navbar-logo {
-  font-size: 1.5rem;
-  color: #4caf50;
-}
-
-.navbar-links {
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.navbar-links li {
-  margin: 0 1rem;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #333;
-}
-
-.cart {
-  font-size: 1.2rem;
-  color: #4caf50;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  padding: 0.9rem;
-  margin-bottom: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 40px;
-}
-
-button {
-  padding: 0.6rem;
-  background-color: white;
-  color: #073418;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #e0e0e0;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap; /* Permite reorganización */
+  position: relative;
+  font-family: "Josefin Sans", sans-serif; /* Aplicar fuente */
 }
 
 .navbar-logo img {
-  padding-top: 15px;
-  width: 250px; /* Ajusta el tamaño del logo según prefieras */
-  height: auto; /* Mantén la proporción de aspecto */
+  height: 60px;
+  flex-shrink: 0;
 }
 
-
-.navbar {
+/* Barra de búsqueda */
+.navbar-search {
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0.5rem 15rem;
-  background-color: white;
-  border-bottom: 5px solid #e0e0e0;
-}
-
-.aboutButton {
-  background-image: url(/src/img/homeIcon.svg);
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30px;
-}
-.catalogButton {
-  background-image: url(/src/img/catalogIcon.svg);
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30px;
-}
-.cartButton {
-  background-image: url(/src/img/cartIcon.svg);
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px;
-}
-.loginButton {
-  background-image: url(/src/img/loginIcon.svg);
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30px;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip {
   position: relative;
-  display: inline-block;
+  max-width: 600px;
+  margin: 10px 0;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 50px 10px 15px; /* Espaciado suficiente para la lupa */
+  border-radius: 20px;
+  border: 2px solid #2e7d32; /* Borde verde */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
   position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  top: 50%;
+  right: 15px; /* Ubicación en el extremo derecho */
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+.search-button span {
+  color: #2e7d32; /* Verde oscuro */
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.productosCatalogo {
-  border: #073418 1px solid;
+.search-button:hover span {
+  transform: scale(1.2);
+  color: #1b5e20; /* Verde más oscuro en hover */
 }
+
+.search-button:hover {
+  background-color: #165D31;
+  transform: scale(1.1);
+}
+
+/* Botón hamburguesa */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburger-button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-button span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-button span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-button span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger-button.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú y botones */
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-links.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #0071ce;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  transform: scale(1.1);
+  color: #ffcc00;
+}
+
+.catalogButton,
+.cartButton,
+.loginButton {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hamburger-button {
+    display: block; /* Visible solo en móviles */
+  }
+
+  .navbar-links {
+    display: none; /* Ocultamos por defecto */
+  }
+
+  .navbar-links.open {
+    display: flex; /* Menú desplegable */
+  }
+
+  .navbar-item {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+}
+{

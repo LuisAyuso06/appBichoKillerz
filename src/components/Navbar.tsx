@@ -1,51 +1,64 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchBar from './SearchBar';
 
 const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-        
+
+      {/* Logo */}
       <div className="navbar-logo">
-        <Link to="/">
-          <img src="/src/img/image_white.png" alt="Logo de la tienda" className="logo-image" />
+        <Link to="/About">
+          <img
+            src="/src/img/image_white.png"
+            alt="Logo de la tienda"
+            className="logo-image"
+          />
         </Link>
       </div>
-        
-      <ul className="navbar-links">
-        <li>
-          <Link to="/about">
-            <button className="aboutButton tooltip">
-              <span className='tooltiptext'>About</span>
-            </button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/Products">
-            <button className="catalogButton tooltip">
-              <span className='tooltiptext'>Products</span>
-            </button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/Services">
-            <button className="catalogButton tooltip">
-              <span className='tooltiptext'>Services</span>
-            </button>
-          </Link>
-        </li>
-      </ul>
 
-      <SearchBar />
+      {/* Barra de búsqueda */}
+      <div className="navbar-search">
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Buscar en Bichokillerz"
+            className="search-input"
+          />
+          <button className="search-button">
+            <span className="material-symbols-outlined">search</span>
+          </button>
+        </div>
+      </div>
 
-      <div className="login">
-        <Link to="/login">
-          <button className="loginButton tooltip">
-            <span className='tooltiptext'>Login</span>
+      {/* Enlaces del Navbar */}
+      <div className="navbar-links">
+        <Link to="/Products" className="navbar-item">
+          <button className="catalogButton">
+            <span className="material-symbols-outlined">shopping_bag</span>
+          </button>
+        </Link>
+
+        <Link to="/Services" className="navbar-item">
+          <button className="cartButton">
+            <span className="material-symbols-outlined">linked_services</span>
+          </button>
+        </Link>
+
+        <Link to="/cart" className="navbar-item">
+          <button className="cartButton">
+            <span className="material-symbols-outlined">shopping_cart</span>
+          </button>
+        </Link>
+
+        <Link to="/login" className="navbar-item">
+          <button className="loginButton">
+            <span className="material-symbols-outlined">login</span>
           </button>
         </Link>
       </div>
+
     </nav>
   );
 };
