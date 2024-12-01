@@ -51,9 +51,9 @@ const Servicios: React.FC = () => {
   return (
     <div>
       <div className="catalogTituloContainer">
-        <h1>Productos</h1>
+        <h1>Servicios</h1>
         <p>
-          Bienvenido a nuestro catálogo de servicios, en donde nuestros
+          ¡Bienvenido a nuestro catálogo de servicios, en donde nuestros
           profesionales te ofrecen los mejores servicios para control de plagas!
         </p>
       </div>
