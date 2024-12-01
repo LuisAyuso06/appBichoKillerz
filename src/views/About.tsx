@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
-import '../styles/about.css'; // Importa el archivo de estilos de About
+import '../styles/About.css'; // Importa el archivo de estilos de About
 
 const About: React.FC = () => {
   return (
