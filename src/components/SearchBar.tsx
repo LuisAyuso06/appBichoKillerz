@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-    // Implementa aquí la lógica de búsqueda
+    Implementa aquí la lógica de búsqueda
   };
 
   return (
@@ -20,4 +20,4 @@ const SearchBar: React.FC = () => {
   
 };
 
-export default SearchBar;
+export default SearchBar; */
