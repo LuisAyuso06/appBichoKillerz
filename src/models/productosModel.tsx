@@ -53,7 +53,7 @@ const Productos: React.FC = () => {
       <div className="catalogTituloContainer">
         <h1>Productos</h1>
         <p>
-          Bienvenido a nuestro catálogo de productos, en donde podras ver todos
+          ¡Bienvenido a nuestro catálogo de productos, en donde podras ver todos
           los productos para control de plagas que tenemos para ofrecerte!
         </p>
       </div>
