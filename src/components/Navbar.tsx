@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import SearchBar from './SearchBar';
 
 const Navbar: React.FC = () => {
-  const location = useLocation(); // Obtiene la ubicación actual
+  // const location = useLocation(); // Obtiene la ubicación actual
 
   return (
     <nav className="navbar">
