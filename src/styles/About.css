@@ -30,17 +30,7 @@ body {
   align-items: center;
 }
 
-.about-carousel .img-carrusel {
-  display: flex;
-}
 
-.about-carousel img {
-  width: 100%; /* Ajusta al ancho del contenedor del carrusel */
-  max-width: 200px; /* Tamaño máximo de la imagen */
-  height: auto; /* Mantiene la proporción */
-  object-fit: contain; /* Asegura que la imagen no se distorsione */
-  margin: 0 auto; /* Centra las imágenes */
-}
 
 .about-text {
   font-size: 1rem;
@@ -50,38 +40,6 @@ body {
   line-height: 1.8;
 }
 
-.carousel .legend {
-  background: rgba(45, 87, 44, 0.7); /* Verde transparente */
-  font-size: 1rem;
-}
-
-/* Estilo para las flechas del carrusel */
-.arrow-prev,
-.arrow-next {
-  position: absolute;
-  top: 50%;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 2;
-  transform: translateY(-50%);
-}
-
-.arrow-prev {
-  left: 10px;
-}
-
-.arrow-next {
-  right: 10px;
-}
-
-/* Animación de transición */
-.carousel .slide {
-  transition: transform 0.5s ease-in-out;
-}
 
 /* CONFIGURACIÓN DE FOOTER */
 .footer {
@@ -207,3 +165,4 @@ body {
     font-size: 1.5rem; /* Flechas más pequeñas */
   }
 }
+

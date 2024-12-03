@@ -10,7 +10,7 @@ const schema = z.object({
   email: z.string().email({ message: 'El correo electrónico no es válido' }),
   password: z.string().min(6, { message: 'La contraseña debe tener al menos 6 caracteres' }),
   confirmPassword: z.string().min(6, { message: 'La contraseña debe tener al menos 6 caracteres' }).optional(), // Solo en caso de registro
-}).refine((data) => data.password === data.confirmPassword, {
+}).refine((data) => data.password === data.confirmPassword || !data.confirmPassword, {
   message: 'Las contraseñas no coinciden',
   path: ['confirmPassword'],
 });
@@ -25,22 +25,45 @@ const LoginRegister: React.FC = () => {
   });
 
   // Función que maneja el envío del formulario
-  const onSubmit = (_data: FormData) => {
-    if (isRegister) {
-      // Lógica de registro
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: '¡Ha sido Registrado exitosamente!',
-        showConfirmButton: false,
-        timer: 1500,
+  const onSubmit = async (data: FormData) => {
+    const endpoint = isRegister
+      ? 'http://localhost:3001/api/auth/register'
+      : 'http://localhost:3001/api/auth/login';
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
       });
-    } else {
-      // Lógica de login
+
+      const result = await response.json();
+
+      if (response.ok) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: isRegister ? '¡Registrado exitosamente!' : '¡Inicio de sesión exitoso!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } else {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: result.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    } catch (error) {
       Swal.fire({
         position: 'top-end',
-        icon: 'success',
-        title: '¡Ha iniciado sesion exitosamente!',
+        icon: 'error',
+        title: 'Error de conexión con el servidor',
         showConfirmButton: false,
         timer: 1500,
       });
@@ -73,18 +96,6 @@ const LoginRegister: React.FC = () => {
           />
           {errors.password && <p className="error-message">{errors.password.message}</p>}
         </div>
-
-        {isRegister && (
-          <div className="input-group">
-            <input
-              type="password"
-              {...register('confirmPassword')}
-              placeholder="🔒 Confirmar contraseña"
-              className={`input-field ${errors.confirmPassword ? 'error' : ''}`}
-            />
-            {errors.confirmPassword && <p className="error-message">{errors.confirmPassword.message}</p>}
-          </div>
-        )}
 
         <button type="submit" className="submit-button">
           {isRegister ? 'Registrarse' : 'Iniciar Sesión'}
