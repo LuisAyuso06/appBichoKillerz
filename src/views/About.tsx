@@ -38,13 +38,13 @@ const About: React.FC = () => {
           <div className="footer-social">
             <h3>Síguenos</h3>
             <div className="info-social">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">📘Facebook: BichoKillerz</a>
+              <a href="https://www.facebook.com/people/BichoKillerz/61568218852645/" target="_blank" rel="noopener noreferrer">📘Facebook: BichoKillerz</a>
             </div>
             <div className="info-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📷 Instagram: BichitoKillez</a>
+              <a href="https://www.instagram.com/bichokillerz/" target="_blank" rel="noopener noreferrer">📷 Instagram: BichoKillerz</a>
             </div>
             <div className="info-social">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">✖️ X : BichoKillerz</a>
+              <a href="https://x.com/BichoKille11018" target="_blank" rel="noopener noreferrer">✖️ X : BichoKillerz</a>
             </div>
           </div>
     
