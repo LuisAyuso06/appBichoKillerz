@@ -4,13 +4,16 @@ import '../styles/catalogStyles.css'
 // Componente que renderiza las tarjetas de los servicios
 export const ServicioCard: React.FC<{ servicio: Servicio }> = ({ servicio }) => {
   return (
-    <div className='catalogCard'>
+    <div className="catalogCard">
       {servicio.imagen && (
         <div>
           <div className="catalogCardText">
             <h2>{servicio.nombre}</h2>
             <p>{servicio.descripcion}</p>
-            <p><strong>Precio: $</strong>{servicio.precio} MXN</p>
+            <p>
+              <strong>Precio: $</strong>
+              {servicio.precio} MXN
+            </p>
           </div>
           <div className="catalogCardImg">
             <img
@@ -21,6 +24,9 @@ export const ServicioCard: React.FC<{ servicio: Servicio }> = ({ servicio }) => 
               }
               alt={servicio.nombre}
             />
+          </div>
+          <div className="botonProducto">
+            <button className="catalogCardButton">Agregar al carrito</button>
           </div>
         </div>
       )}

@@ -23,6 +23,9 @@ export const ProductCard: React.FC<{ producto: Producto }> = ({ producto }) => {
               alt={producto.nombre}
             />
           </div>
+          <div className='botonProducto'>
+            <button className="catalogCardButton">Agregar al carrito</button>
+          </div>
         </div>
       )}
     </div>

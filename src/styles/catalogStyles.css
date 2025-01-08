@@ -74,6 +74,22 @@
   transform: scale(1.05);
 }
 
+.botonProducto{
+  text-align: center;
+  margin: 20px;
+}
+
+.catalogCardButton{
+  background-color: #48b046;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 /* Estilo responsivo */
 @media (max-width: 768px) {
   .catalogCardText h2 {
