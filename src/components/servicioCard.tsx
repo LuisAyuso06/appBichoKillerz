@@ -25,7 +25,8 @@ export const ServicioCard: React.FC<{ servicio: Servicio }> = ({ servicio }) => 
               alt={servicio.nombre}
             />
           </div>
-          <div className="botonProducto">
+          <div
+            className="botonProducto">
             <button className="catalogCardButton">Agregar al carrito</button>
           </div>
         </div>

@@ -14,19 +14,6 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="navbar-search">
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Buscar en Bichokillerz"
-            className="search-input"
-          />
-          <button className="search-button">
-            <span className="material-symbols-outlined">search</span>
-          </button>
-        </div>
-      </div>
-
       <div className="navbar-links">
         <Link to="/Products" className="navbar-item">
           <button className="catalogButton">
@@ -37,12 +24,6 @@ const Navbar: React.FC = () => {
         <Link to="/Services" className="navbar-item">
           <button className="cartButton">
             <span className="material-symbols-outlined">linked_services</span>
-          </button>
-        </Link>
-
-        <Link to="/cart" className="navbar-item">
-          <button className="cartButton">
-            <span className="material-symbols-outlined">shopping_cart</span>
           </button>
         </Link>
       </div>

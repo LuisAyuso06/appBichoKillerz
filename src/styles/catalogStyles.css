@@ -90,6 +90,10 @@
   transition: background-color 0.3s;
 }
 
+.catalogCardButton:hover {
+  opacity: 0.8;
+}
+
 /* Estilo responsivo */
 @media (max-width: 768px) {
   .catalogCardText h2 {

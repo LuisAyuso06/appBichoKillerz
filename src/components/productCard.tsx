@@ -10,8 +10,14 @@ export const ProductCard: React.FC<{ producto: Producto }> = ({ producto }) => {
           <div className="catalogCardText">
             <h2>{producto.nombre}</h2>
             <p>{producto.descripcion}</p>
-            <p><strong>Precio: $</strong>{producto.precio} MXN</p>
-            <p><strong>Inventario: </strong>{producto.stock} piezas</p>
+            <p>
+              <strong>Precio: $</strong>
+              {producto.precio} MXN
+            </p>
+            <p>
+              <strong>Inventario: </strong>
+              {producto.stock} piezas
+            </p>
           </div>
           <div className="catalogCardImg">
             <img
@@ -23,8 +29,11 @@ export const ProductCard: React.FC<{ producto: Producto }> = ({ producto }) => {
               alt={producto.nombre}
             />
           </div>
-          <div className='botonProducto'>
-            <button className="catalogCardButton">Agregar al carrito</button>
+          <div className="botonProducto">
+            <button
+              className="catalogCardButton">
+              Agregar al carrito
+            </button>
           </div>
         </div>
       )}
